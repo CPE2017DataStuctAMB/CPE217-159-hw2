@@ -1,10 +1,11 @@
-การบ้านนี้ให้นักศึกษา implement “Dynamic Array ADT” โดยใช้ Java โดยให้มีคุณสมบัติดังต่อไปนี้
+การบ้านนี้ให้นักศึกษา implement “Dynamic Arra
+y ADT” โดยใช้ Java โดยให้มีคุณสมบัติดังต่อไปนี้
 #1. ให้สร้าง class ชื่อว่า DynamicArray โดย class นี้ มี private variables ดังต่อไปนี้
+- private int[] arr;
+- private int capacity;
+- private int size;
+- ความหมายของแต่ละตัวแปรอยู่ในสไลด์ที่อาจารย์สอนในห้อง
 
- 1. private int[] arr;
- 2. private int capacity;
- 3. private int size;
- 4. ความหมายของแต่ละตัวแปรอยู่ในสไลด์ที่อาจารย์สอนในห้อง
 #2. ให้ class DynamicArray มี public functions ดังต่อไปนี้
 ####a. public boolean isEmpty()
 - ฟังก์ชันนี้ทำหน้าที่ return ว่า Data structure นี้ว่างหรือไม่
