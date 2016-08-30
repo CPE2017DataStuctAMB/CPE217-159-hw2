@@ -7,9 +7,9 @@
 * ความหมายของแต่ละตัวแปรอยู่ในสไลด์ที่อาจารย์สอนในห้อง
 
 ##2. ให้ class DynamicArray มี public functions ดังต่อไปนี้
-####a. public boolean isEmpty()
+#### a. public boolean isEmpty()
 * ฟังก์ชันนี้ทำหน้าที่ return ว่า Data structure นี้ว่างหรือไม่
-####b. public void pushBack(int data)
+#### b. public void pushBack(int data)
  * ฟังก์ชันนี้ท าหน้าที่น าข้อมูลใหม่มาต่อท้ายข้อมูลเดิม
  * ถ้า array ปัจจุบันเต็มให้ขยายขนาดออกเป็นสองเท่า ตามที่เรียนในห้อง
 #### c. public int popBack()
@@ -17,11 +17,11 @@
  * ให้ return ค่าของข้อมูลที่ถูกลบไป ส่งให้กับ caller ด้วย
  * ถ้า Data structure ว่างอยู่ ให้ print ออกทาง console ว่า ERROR แล้ว return 0 แทน
 (meaningless number)
-####d. public int get(int i)
+#### d. public int get(int i)
  * ฟังก์ชันนี้ท าหน้าที่ return ค่าข้อมูลที่ถูก indexed ด้วยค่า i (ข้อมูลตัวแรกถูก indexed ด้วย 0)
  * ถ้าค่า i ไม่ถูกต้อง (คุณควรรู้ว่าค่า i ไม่ถูกต้องในกรณีใด) ให้ print ออกทาง console ว่า ERROR
 แล้ว return 0 แทน (meaningless number)
-####e. public void set(int i, int value)
+#### e. public void set(int i, int value)
  * ฟังก์ชันนี้ท าหน้าที่ set ค่า value ไปยังต าแหน่งใน array ที่ indexed ด้วยค่า i (ข้อมูลตัวแรกถูก
 indexed ด้วย 0)
  * ถ้าค่า i ไม่ถูกต้อง (คุณควรรู้ว่าค่า i ไม่ถูกต้องในกรณีใด) ให้ print ออกทาง console ว่า ERROR
