@@ -20,28 +20,26 @@ public class DynamicArray {
     }
 
     public void pushBack(int data){
-        // FIXED by ball lasted 0120
-        size += 1;
-        if(size <= capacity){
-            arr[size-1] = data;
+        // FIXED by Ball, Aunpyz
+        if(size < capacity){
+            arr[size] = data;
         }else{
-            int oldCap = capacity;
             int[] oldArr = arr;
-            capacity = 2*oldCap;
+            capacity *= 2;
             arr = new int[capacity];
-            for (int i=0;i<oldCap;i++){
+            for (int i=0;i<oldArr.length;i++){
                 arr[i] = oldArr[i];
             }
-            arr[size-1] = data;
+            arr[size] = data;
         }
+        size++;
 
     }
 
     public int popBack(){
-        // FIXED by ball lasted 590831 0214
+        // FIXED by ball, Aunpyz
         if(size > 0){
             int tmp = arr[size];
-            arr[size] = 0;
             size--;
             return tmp;
         }else{
@@ -52,16 +50,17 @@ public class DynamicArray {
     }
 
     public int get(int i){
-        // FIXED by ball lasted 590831 0152
-        if(i < size-1)
+        // FIXED by ball, Aunpyz lasted 590831 0152
+        if(i < size-1 && i >= 0)
             return arr[i];
         else
             System.out.println("ERROR");
         return 0;
     }
     public void set(int i, int value){
-        // FIXED by ball lasted 590831 0250
-        if(i < size-1){
+        // FIXED by ball, Aunpyz lasted 590831 0250
+        if(i < size-1 && i >= 0)
+        {
             arr[i] = value;
             //System.out.println(arr[i]);
         }else
@@ -69,10 +68,10 @@ public class DynamicArray {
     }
 
     public void remove(int i){
-        // FIXED by ball lasted 590831 0255
-        if(i < size-1){
-            int s=0;
-            boolean f=false;
+        // FIXED by ball, Aunpyz lasted 590831 0255
+        if(i < size-1 && i >= 0){
+            int s = 0;
+            boolean f = false;
             while(s<size){
                 if(s==i-1)
                     f = true;
