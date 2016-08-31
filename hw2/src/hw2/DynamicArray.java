@@ -20,7 +20,7 @@ public class DynamicArray {
     }
 
     public void pushBack(int data){
-        // FIXED by ball
+        // FIXED by ball lasted 0120
         size += 1;
         if(size <= capacity){
             arr[size-1] = data;
@@ -38,7 +38,7 @@ public class DynamicArray {
     }
 
     public int popBack(){
-        // FIXED by ball lastest 590831 0214
+        // FIXED by ball lasted 590831 0214
         if(size > 0){
             int tmp = arr[size];
             arr[size] = 0;
@@ -60,16 +60,16 @@ public class DynamicArray {
         return 0;
     }
     public void set(int i, int value){
-        // FIXED by ball lasted 590831 0205
+        // FIXED by ball lasted 590831 0250
         if(i < size-1){
             arr[i] = value;
-            System.out.println(arr[i]);
+            //System.out.println(arr[i]);
         }else
             System.out.println("ERROR");
     }
 
     public void remove(int i){
-        // FIXED by ball lasted 590831 0234
+        // FIXED by ball lasted 590831 0255
         if(i < size-1){
             int s=0;
             boolean f=false;
@@ -81,6 +81,7 @@ public class DynamicArray {
                 }
                 s++;
             }
+            size--;
         }else
             System.out.println("ERROR");
     }
@@ -92,14 +93,14 @@ public class DynamicArray {
     }
 
     public int getSize(){
-        // FIXED THIS
-        return 0;
+        // FIXED by ball lasted 590831 0236
+        return size;
     }
 
     public void printStructure(){
         // FIXED by ball
         System.out.print("Size = " + size + ", Cap = " + capacity + ", arr = [ ");
-        for (int i=0;i<capacity;i++){
+        for (int i=0;i<size;i++){
             if(arr[i]>0) {
                 System.out.print(arr[i]);
                 if(i < size-1)
@@ -108,4 +109,5 @@ public class DynamicArray {
         }
         System.out.println(" ]");
     }
+
 }

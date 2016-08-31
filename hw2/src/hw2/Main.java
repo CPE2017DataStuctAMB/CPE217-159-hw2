@@ -18,10 +18,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        DynamicArray var1 = new DynamicArray(2);
-        System.out.println(var1.isEmpty());
-        //Test by
 
+        System.out.println("\n____TestCase1___");
+        DynamicArray var1 = new DynamicArray(2);
+        System.out.println("now Empty : "+var1.isEmpty());
         var1.printStructure();
         var1.pushBack(5);
         var1.pushBack(6);
@@ -48,10 +48,22 @@ public class Main {
             var3.pushBack(i*i+1);
         }
         var3.printStructure();
-        System.out.println(var3.get(10));
-        var3.set(10, 555);
-        var3.remove(10);
+        System.out.println(var3.get(3));
+        var3.set(3, 555);
+        System.out.println(var3.get(3));
+        var3.remove(3);
         var3.printStructure();
+
+        System.out.println("\n____TestCase4___");
+        DynamicArray var4 = new DynamicArray(2);
+        for(int i=0;i<10;i++){
+            var4.pushBack(i*i+1);
+        }
+        var4.printStructure();
+        System.out.println(var4.get(10));
+        var4.set(10, 555);
+        var4.remove(10);
+        var4.printStructure();
     }
 
 }
